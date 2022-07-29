@@ -1,0 +1,2843 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ 305 Dumps - Case Study</title>
+        <!-- deflink == defered link (loaded later by jquery) -->
+    <!-- bootstrap v4 css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://www.examtopics.com/assets/css/style.css">
+</head>
+<body>
+    
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #48
+  <span class="question-title-topic pull-right">
+   Topic 5
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763052">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   <br/>
+   Existing Environment -
+   <br/>
+   <br/>
+   Azure Environment -
+   <br/>
+   Litware has 10 Azure subscriptions that are linked to the Litware.com tenant and five Azure
+                    subscriptions that are linked to the dev.litware.com tenant. All the subscriptions are in an
+                    Enterprise Agreement (EA).
+   <br/>
+   The litware.com tenant contains a custom Azure role-based access control (Azure RBAC) role named
+                    Role1 that grants the DataActions read permission to the blobs and files in Azure Storage.
+   <br/>
+   <br/>
+   On-Premises Environment -
+   <br/>
+   The on-premises network of Litware contains the resources shown in the following table.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0000300001.png"/>
+   <br/>
+   <br/>
+   Network Environment -
+   <br/>
+   Litware has ExpressRoute connectivity to Azure.
+   <br/>
+   Planned Changes and Requirements
+   <br/>
+   Litware plans to implement the following changes:
+   <br/>
+   Migrate DB1 and DB2 to Azure.
+   <br/>
+   Migrate App1 to Azure virtual machines.
+   <br/>
+   Migrate the external storage used by App1 to Azure Storage.
+   <br/>
+   Deploy the Azure virtual machines that will host App1 to Azure dedicated hosts.
+   <br/>
+   Authentication and Authorization Requirements
+   <br/>
+   Litware identifies the following authentication and authorization requirements:
+   <br/>
+   Only users that manage the production environment by using the Azure portal must connect from a
+                    hybrid Azure AD-joined device and authenticate by using
+   <br/>
+   Azure Multi-Factor Authentication (MFA).
+   <br/>
+   The Network Contributor built-in RBAC role must be used to grant permissions to the network
+                    administrators for all the virtual networks in all the Azure subscriptions.
+   <br/>
+   To access the resources in Azure, App1 must use the managed identity of the virtual machines that
+                    will host the app.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0000300008.png"/>
+   <br/>
+   RBAC roles must be applied at the highest level possible.
+   <br/>
+   <br/>
+   Resiliency Requirements -
+   <br/>
+   Litware identifies the following resiliency requirements:
+   <br/>
+   Once migrated to Azure, DB1 and DB2 must meet the following requirements:
+   <br/>
+   - Maintain availability if two availability zones in the local Azure region fail.
+   <br/>
+   - Fail over automatically.
+   <br/>
+   - Minimize I/O latency.
+   <br/>
+   App1 must meet the following requirements:
+   <br/>
+   - Be hosted in an Azure region that supports availability zones.
+   <br/>
+   - Be hosted on Azure virtual machines that support automatic scaling.
+   <br/>
+   - Maintain availability if two availability zones in the local Azure region fail.
+   <br/>
+   Security and Compliance Requirements
+   <br/>
+   Litware identifies the following security and compliance requirements:
+   <br/>
+   Once App1 is migrated to Azure, you must ensure that new data can be written to the app, and the
+                    modification of new and existing data is prevented for a period of three years.
+   <br/>
+   On-premises users and services must be able to access the Azure Storage account that will host the
+                    data in App1.
+   <br/>
+   Access to the public endpoint of the Azure Storage account that will host the App1 data must be
+                    prevented.
+   <br/>
+   All Azure SQL databases in the production environment must have Transparent Data Encryption (TDE)
+                    enabled.
+   <br/>
+   App1 must NOT share physical hardware with other workloads.
+   <br/>
+   <br/>
+   Business Requirements -
+   <br/>
+   Litware identifies the following business requirements:
+   <br/>
+   Minimize administrative effort.
+   <br/>
+   Minimize costs.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   After you migrate App1 to Azure, you need to enforce the data modification requirements to meet the
+                    security and compliance requirements.
+   <br/>
+   What should you do?
+   <br/>
+  </p>
+  <div class="question-choices-container">
+   <div class="voted-answers-tally d-none">
+    <script id="763052" type="application/json">
+     [{"voted_answers": "A", "vote_count": 50, "is_most_voted": true}, {"voted_answers": "B", "vote_count": 1, "is_most_voted": false}]
+    </script>
+   </div>
+   <ul>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="A">
+      A.
+     </span>
+     Create an access policy for the blob service.
+     <span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+      Most Voted
+     </span>
+    </li>
+    <li class="multi-choice-item correct-hidden">
+     <span class="multi-choice-letter" data-choice-letter="B">
+      B.
+     </span>
+     Implement Azure resource locks.
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="C">
+      C.
+     </span>
+     Create Azure RBAC assignments.
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="D">
+      D.
+     </span>
+     Modify the access level of the blob service.
+    </li>
+   </ul>
+  </div>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/12/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/12/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    19
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     B
+    </span>
+    <a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="https://www.examtopics.com/exams/microsoft/az-305/view/12/#" title="">
+     🗳️
+    </a>
+    <br/>
+   </span>
+   <span class="answer-description">
+    Scenario: Once App1 is migrated to Azure, you must ensure that new data can be written to the
+                        app, and the modification of new and existing data is prevented for a period of three years.
+    <br/>
+    As an administrator, you can lock a subscription, resource group, or resource to prevent other
+                        users in your organization from accidentally deleting or modifying critical resources. The lock
+                        overrides any permissions the user might have.
+    <br/>
+    Reference:
+    <br/>
+    https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources
+   </span>
+   <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em">
+    <i>
+     Community vote distribution
+    </i>
+    <!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>-->
+    <div class="progress vote-distribution-bar">
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="50 votes." data-toggle="tooltip" role="progressbar" style="width: 98%; display: flex;" title="">
+      A (98%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 2%; display: flex;" title="">
+      2%
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">
+      B (20%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">
+      Other
+     </div>
+    </div>
+   </div>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #49
+  <span class="question-title-topic pull-right">
+   Topic 6
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763053">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs. When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   <br/>
+   Overview -
+   <br/>
+   Fabrikam, Inc. is an engineering company that has offices throughout Europe. The company has a main
+                    office in London and three branch offices in Amsterdam,
+   <br/>
+   Berlin, and Rome.
+   <br/>
+   Existing Environment: Active Directory Environment
+   <br/>
+   The network contains two Active Directory forests named corp.fabrikam.com and rd.fabrikam.com. There
+                    are no trust relationships between the forests.
+   <br/>
+   Corp.fabrikam.com is a production forest that contains identities used for internal user and
+                    computer authentication.
+   <br/>
+   Rd.fabrikam.com is used by the research and development (R&amp;D) department only. The R&amp;D
+                    department is restricted to using on-premises resources only.
+   <br/>
+   Existing Environment: Network Infrastructure
+   <br/>
+   Each office contains at least one domain controller from the corp.fabrikam.com domain. The main
+                    office contains all the domain controllers for the rd.fabrikam.com forest.
+   <br/>
+   All the offices have a high-speed connection to the internet.
+   <br/>
+   An existing application named WebApp1 is hosted in the data center of the London office. WebApp1 is
+                    used by customers to place and track orders. WebApp1 has a web tier that uses Microsoft Internet
+                    information Services (IIS) and a database tier that runs Microsoft SQL Server 2016. The web tier and
+                    the database tier are deployed to virtual machines that run on Hyper-V.
+   <br/>
+   The IT department currently uses a separate Hyper-V environment to test updates to WebApp1.
+   <br/>
+   Fabrikam purchases all Microsoft licenses through a Microsoft Enterprise Agreement that includes
+                    Software Assurance.
+   <br/>
+   Existing Environment: Problem Statements
+   <br/>
+   The use of WebApp1 is unpredictable. At peak times, users often report delays. At other times, many
+                    resources for WebApp1 are underutilized.
+   <br/>
+   <br/>
+   Requirements: Planned Changes -
+   <br/>
+   Fabrikam plans to move most of its production workloads to Azure during the next few years,
+                    including virtual machines that rely on Active Directory for authentication.
+   <br/>
+   As one of its first projects, the company plans to establish a hybrid identity model, facilitating
+                    an upcoming Microsoft 365 deployment.
+   <br/>
+   All R&amp;D operations will remain on-premises.
+   <br/>
+   Fabrikam plans to migrate the production and test instances of WebApp1 to Azure.
+   <br/>
+   Requirements: Technical Requirements
+   <br/>
+   Fabrikam identifies the following technical requirements:
+   <br/>
+   Website content must be easily updated from a single point.
+   <br/>
+   User input must be minimized when provisioning new web app instances.
+   <br/>
+   Whenever possible, existing on-premises licenses must be used to reduce cost.
+   <br/>
+   Users must always authenticate by using their corp.fabrikam.com UPN identity.
+   <br/>
+   Any new deployments to Azure must be redundant in case an Azure region fails.
+   <br/>
+   Whenever possible, solutions must be deployed to Azure by using the Standard pricing tier of Azure
+                    App Service.
+   <br/>
+   An email distribution group named IT Support must be notified of any issues relating to the
+                    directory synchronization services.
+   <br/>
+   In the event that a link fails between Azure and the on-premises network, ensure that the virtual
+                    machines hosted in Azure can authenticate to Active Directory.
+   <br/>
+   Directory synchronization between Azure Active Directory (Azure AD) and corp.fabrikam.com must not
+                    be affected by a link failure between Azure and the on- premises network.
+   <br/>
+   Requirements: Database Requirements
+   <br/>
+   Fabrikam identifies the following database requirements:
+   <br/>
+   Database metrics for the production instance of WebApp1 must be available for analysis so that
+                    database administrators can optimize the performance settings.
+   <br/>
+   To avoid disrupting customer access, database downtime must be minimized when databases are
+                    migrated.
+   <br/>
+   Database backups must be retained for a minimum of seven years to meet compliance requirements.
+   <br/>
+   Requirements: Security Requirements
+   <br/>
+   Fabrikam identifies the following security requirements:
+   <br/>
+   Company information including policies, templates, and data must be inaccessible to anyone outside
+                    the company.
+   <br/>
+   Users on the on-premises network must be able to authenticate to corp.fabrikam.com if an internet
+                    link fails.
+   <br/>
+   Administrators must be able authenticate to the Azure portal by using their corp.fabrikam.com
+                    credentials.
+   <br/>
+   All administrative access to the Azure portal must be secured by using multi-factor authentication
+                    (MFA).
+   <br/>
+   The testing of WebApp1 updates must not be visible to anyone outside the company.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   You need to recommend a solution to meet the database retention requirements.
+   <br/>
+   What should you recommend?
+   <br/>
+  </p>
+  <div class="question-choices-container">
+   <div class="voted-answers-tally d-none">
+    <script id="763053" type="application/json">
+     [{"voted_answers": "A", "vote_count": 15, "is_most_voted": true}]
+    </script>
+   </div>
+   <ul>
+    <li class="multi-choice-item correct-hidden">
+     <span class="multi-choice-letter" data-choice-letter="A">
+      A.
+     </span>
+     Configure a long-term retention policy for the database.
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="B">
+      B.
+     </span>
+     Configure Azure Site Recovery.
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="C">
+      C.
+     </span>
+     Use automatic Azure SQL Database backups.
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="D">
+      D.
+     </span>
+     Configure geo-replication of the database.
+    </li>
+   </ul>
+  </div>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/13/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/13/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    9
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     A
+    </span>
+    <a class="vote-answer-button ml-1 d-print-none" data-toggle="tooltip" href="https://www.examtopics.com/exams/microsoft/az-305/view/13/#" title="Vote an answer">
+     🗳️
+    </a>
+    <br/>
+   </span>
+   <span class="answer-description">
+   </span>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #50
+  <span class="question-title-topic pull-right">
+   Topic 7
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763054">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs. When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   Existing Environment: Technical Environment
+   <br/>
+   The on-premises network contains a single Active Directory domain named contoso.com.
+   <br/>
+   Contoso has a single Azure subscription.
+   <br/>
+   Existing Environment: Business Partnerships
+   <br/>
+   Contoso has a business partnership with Fabrikam, Inc. Fabrikam users access some Contoso
+                    applications over the internet by using Azure Active Directory
+   <br/>
+   (Azure AD) guest accounts.
+   <br/>
+   <br/>
+   Requirements: Planned Changes -
+   <br/>
+   Contoso plans to deploy two applications named App1 and App2 to Azure.
+   <br/>
+   <br/>
+   Requirements: App1 -
+   <br/>
+   App1 will be a Python web app hosted in Azure App Service that requires a Linux runtime. Users from
+                    Contoso and Fabrikam will access App1.
+   <br/>
+   App1 will access several services that require third-party credentials and access strings. The
+                    credentials and access strings are stored in Azure Key Vault.
+   <br/>
+   App1 will have six instances: three in the East US Azure region and three in the West Europe Azure
+                    region.
+   <br/>
+   App1 has the following data requirements:
+   <br/>
+   Each instance will write data to a data store in the same availability zone as the instance.
+   <br/>
+   Data written by any App1 instance must be visible to all App1 instances.
+   <br/>
+   App1 will only be accessible from the internet. App1 has the following connection requirements:
+   <br/>
+   Connections to App1 must pass through a web application firewall (WAF).
+   <br/>
+   Connections to App1 must be active-active load balanced between instances.
+   <br/>
+   All connections to App1 from North America must be directed to the East US region. All other
+                    connections must be directed to the West Europe region.
+   <br/>
+   Every hour, you will run a maintenance task by invoking a PowerShell script that copies files from
+                    all the App1 instances. The PowerShell script will run from a central location.
+   <br/>
+   <br/>
+   Requirements: App2 -
+   <br/>
+   App2 will be a NET app hosted in App Service that requires a Windows runtime. App2 has the following
+                    file storage requirements:
+   <br/>
+   Save files to an Azure Storage account.
+   <br/>
+   Replicate files to an on-premises location.
+   <br/>
+   Ensure that on-premises clients can read the files over the LAN by using the SMB protocol.
+   <br/>
+   You need to monitor App2 to analyze how long it takes to perform different transactions within the
+                    application. The solution must not require changes to the application code.
+   <br/>
+   Application Development Requirements
+   <br/>
+   Application developers will constantly develop new versions of App1 and App2. The development
+                    process must meet the following requirements:
+   <br/>
+   A staging instance of a new application version must be deployed to the application host before the
+                    new version is used in production.
+   <br/>
+   After testing the new version, the staging version of the application will replace the production
+                    version.
+   <br/>
+   The switch to the new application version from staging to production must occur without any downtime
+                    of the application.
+   <br/>
+   <br/>
+   Identity Requirements -
+   <br/>
+   Contoso identifies the following requirements for managing Fabrikam access to resources:
+   <br/>
+   Every month, an account manager at Fabrikam must review which Fabrikam users have access permissions
+                    to App1. Accounts that no longer need permissions must be removed as guests.
+   <br/>
+   The solution must minimize development effort.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0001000013.png"/>
+   <br/>
+   <br/>
+   Security Requirement -
+   <br/>
+   All secrets used by Azure services must be stored in Azure Key Vault.
+   <br/>
+   Services that require credentials must have the credentials tied to the service instance. The
+                    credentials must NOT be shared between services.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   HOTSPOT -
+   <br/>
+   What should you implement to meet the identity requirements? To answer, select the appropriate
+                    options in the answer area.
+   <br/>
+   NOTE: Each correct selection is worth one point.
+   <br/>
+   Hot Area:
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0001100001.png"/>
+   <br/>
+  </p>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/13/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/13/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    25
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0001200001.png"/>
+    </span>
+    <br/>
+   </span>
+   <span class="answer-description">
+    Requirements: Identity Requirements
+    <br/>
+    Contoso identifies the following requirements for managing Fabrikam access to resources:
+    <br/>
+    ✑ Every month, an account manager at Fabrikam must review which Fabrikam users have access
+                        permissions to App1. Accounts that no longer need permissions must be removed as guests.
+    <br/>
+    ✑ The solution must minimize development effort.
+    <br/>
+    Box 1: The Azure AD Privileged Identity Management (PIM)
+    <br/>
+    When should you use access reviews?
+    <br/>
+    Too many users in privileged roles: It's a good idea to check how many users have administrative
+                        access, how many of them are Global Administrators, and if
+    <br/>
+    <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0001200004.png"/>
+    there are any invited guests or partners that have not been removed after being assigned to do
+                        an administrative task. You can recertify the role assignment users in Azure AD roles such as
+                        Global Administrators, or Azure resources roles such as User Access Administrator in the Azure
+                        AD Privileged Identity
+    <br/>
+    Management (PIM) experience.
+    <br/>
+    <br/>
+    Box 2: Access reviews -
+    <br/>
+    Azure Active Directory (Azure AD) access reviews enable organizations to efficiently manage
+                        group memberships, access to enterprise applications, and role assignments. User's access can be
+                        reviewed on a regular basis to make sure only the right people have continued access.
+    <br/>
+    Reference:
+    <br/>
+    https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview
+   </span>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #51
+  <span class="question-title-topic pull-right">
+   Topic 8
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763055">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs. When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   Existing Environment: Technical Environment
+   <br/>
+   The on-premises network contains a single Active Directory domain named contoso.com.
+   <br/>
+   Contoso has a single Azure subscription.
+   <br/>
+   Existing Environment: Business Partnerships
+   <br/>
+   Contoso has a business partnership with Fabrikam, Inc. Fabrikam users access some Contoso
+                    applications over the internet by using Azure Active Directory
+   <br/>
+   (Azure AD) guest accounts.
+   <br/>
+   <br/>
+   Requirements: Planned Changes -
+   <br/>
+   Contoso plans to deploy two applications named App1 and App2 to Azure.
+   <br/>
+   <br/>
+   Requirements: App1 -
+   <br/>
+   App1 will be a Python web app hosted in Azure App Service that requires a Linux runtime. Users from
+                    Contoso and Fabrikam will access App1.
+   <br/>
+   App1 will access several services that require third-party credentials and access strings. The
+                    credentials and access strings are stored in Azure Key Vault.
+   <br/>
+   App1 will have six instances: three in the East US Azure region and three in the West Europe Azure
+                    region.
+   <br/>
+   App1 has the following data requirements:
+   <br/>
+   Each instance will write data to a data store in the same availability zone as the instance.
+   <br/>
+   Data written by any App1 instance must be visible to all App1 instances.
+   <br/>
+   App1 will only be accessible from the internet. App1 has the following connection requirements:
+   <br/>
+   Connections to App1 must pass through a web application firewall (WAF).
+   <br/>
+   Connections to App1 must be active-active load balanced between instances.
+   <br/>
+   All connections to App1 from North America must be directed to the East US region. All other
+                    connections must be directed to the West Europe region.
+   <br/>
+   Every hour, you will run a maintenance task by invoking a PowerShell script that copies files from
+                    all the App1 instances. The PowerShell script will run from a central location.
+   <br/>
+   <br/>
+   Requirements: App2 -
+   <br/>
+   App2 will be a NET app hosted in App Service that requires a Windows runtime. App2 has the following
+                    file storage requirements:
+   <br/>
+   Save files to an Azure Storage account.
+   <br/>
+   Replicate files to an on-premises location.
+   <br/>
+   Ensure that on-premises clients can read the files over the LAN by using the SMB protocol.
+   <br/>
+   You need to monitor App2 to analyze how long it takes to perform different transactions within the
+                    application. The solution must not require changes to the application code.
+   <br/>
+   Application Development Requirements
+   <br/>
+   Application developers will constantly develop new versions of App1 and App2. The development
+                    process must meet the following requirements:
+   <br/>
+   A staging instance of a new application version must be deployed to the application host before the
+                    new version is used in production.
+   <br/>
+   After testing the new version, the staging version of the application will replace the production
+                    version.
+   <br/>
+   The switch to the new application version from staging to production must occur without any downtime
+                    of the application.
+   <br/>
+   <br/>
+   Identity Requirements -
+   <br/>
+   Contoso identifies the following requirements for managing Fabrikam access to resources:
+   <br/>
+   Every month, an account manager at Fabrikam must review which Fabrikam users have access permissions
+                    to App1. Accounts that no longer need permissions must be removed as guests.
+   <br/>
+   The solution must minimize development effort.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0003200013.png"/>
+   <br/>
+   <br/>
+   Security Requirement -
+   <br/>
+   All secrets used by Azure services must be stored in Azure Key Vault.
+   <br/>
+   Services that require credentials must have the credentials tied to the service instance. The
+                    credentials must NOT be shared between services.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   DRAG DROP -
+   <br/>
+   You need to recommend a solution that meets the file storage requirements for App2.
+   <br/>
+   What should you deploy to the Azure subscription and the on-premises network? To answer, drag the
+                    appropriate services to the correct locations. Each service may be used once, more than once, or not
+                    at all. You may need to drag the split bar between panes or scroll to view content.
+   <br/>
+   NOTE: Each correct selection is worth one point.
+   <br/>
+   Select and Place:
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0003300001.png"/>
+   <br/>
+  </p>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/13/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/13/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    6
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0003400001.png"/>
+    </span>
+    <br/>
+   </span>
+   <span class="answer-description">
+    Box 1: Azure Files -
+    <br/>
+    Scenario: App2 has the following file storage requirements:
+    <br/>
+    ✑ Save files to an Azure Storage account.
+    <br/>
+    ✑ Replicate files to an on-premises location.
+    <br/>
+    ✑ Ensure that on-premises clients can read the files over the LAN by using the SMB protocol.
+    <br/>
+    <br/>
+    Box 2: Azure File Sync -
+    <br/>
+    Use Azure File Sync to centralize your organization's file shares in Azure Files, while keeping
+                        the flexibility, performance, and compatibility of an on-premises file server. Azure File Sync
+                        transforms Windows Server into a quick cache of your Azure file share. You can use any protocol
+                        that's available on Windows Server to access your data locally, including SMB, NFS, and FTPS.
+                        You can have as many caches as you need across the world.
+    <br/>
+    Reference:
+    <br/>
+    https://docs.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide
+   </span>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #52
+  <span class="question-title-topic pull-right">
+   Topic 8
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763056">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs. When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   Existing Environment: Technical Environment
+   <br/>
+   The on-premises network contains a single Active Directory domain named contoso.com.
+   <br/>
+   Contoso has a single Azure subscription.
+   <br/>
+   Existing Environment: Business Partnerships
+   <br/>
+   Contoso has a business partnership with Fabrikam, Inc. Fabrikam users access some Contoso
+                    applications over the internet by using Azure Active Directory
+   <br/>
+   (Azure AD) guest accounts.
+   <br/>
+   <br/>
+   Requirements: Planned Changes -
+   <br/>
+   Contoso plans to deploy two applications named App1 and App2 to Azure.
+   <br/>
+   <br/>
+   Requirements: App1 -
+   <br/>
+   App1 will be a Python web app hosted in Azure App Service that requires a Linux runtime. Users from
+                    Contoso and Fabrikam will access App1.
+   <br/>
+   App1 will access several services that require third-party credentials and access strings. The
+                    credentials and access strings are stored in Azure Key Vault.
+   <br/>
+   App1 will have six instances: three in the East US Azure region and three in the West Europe Azure
+                    region.
+   <br/>
+   App1 has the following data requirements:
+   <br/>
+   Each instance will write data to a data store in the same availability zone as the instance.
+   <br/>
+   Data written by any App1 instance must be visible to all App1 instances.
+   <br/>
+   App1 will only be accessible from the internet. App1 has the following connection requirements:
+   <br/>
+   Connections to App1 must pass through a web application firewall (WAF).
+   <br/>
+   Connections to App1 must be active-active load balanced between instances.
+   <br/>
+   All connections to App1 from North America must be directed to the East US region. All other
+                    connections must be directed to the West Europe region.
+   <br/>
+   Every hour, you will run a maintenance task by invoking a PowerShell script that copies files from
+                    all the App1 instances. The PowerShell script will run from a central location.
+   <br/>
+   <br/>
+   Requirements: App2 -
+   <br/>
+   App2 will be a NET app hosted in App Service that requires a Windows runtime. App2 has the following
+                    file storage requirements:
+   <br/>
+   Save files to an Azure Storage account.
+   <br/>
+   Replicate files to an on-premises location.
+   <br/>
+   Ensure that on-premises clients can read the files over the LAN by using the SMB protocol.
+   <br/>
+   You need to monitor App2 to analyze how long it takes to perform different transactions within the
+                    application. The solution must not require changes to the application code.
+   <br/>
+   Application Development Requirements
+   <br/>
+   Application developers will constantly develop new versions of App1 and App2. The development
+                    process must meet the following requirements:
+   <br/>
+   A staging instance of a new application version must be deployed to the application host before the
+                    new version is used in production.
+   <br/>
+   After testing the new version, the staging version of the application will replace the production
+                    version.
+   <br/>
+   The switch to the new application version from staging to production must occur without any downtime
+                    of the application.
+   <br/>
+   <br/>
+   Identity Requirements -
+   <br/>
+   Contoso identifies the following requirements for managing Fabrikam access to resources:
+   <br/>
+   Every month, an account manager at Fabrikam must review which Fabrikam users have access permissions
+                    to App1. Accounts that no longer need permissions must be removed as guests.
+   <br/>
+   The solution must minimize development effort.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0003200013.png"/>
+   <br/>
+   <br/>
+   Security Requirement -
+   <br/>
+   All secrets used by Azure services must be stored in Azure Key Vault.
+   <br/>
+   Services that require credentials must have the credentials tied to the service instance. The
+                    credentials must NOT be shared between services.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   You need to recommend a solution that meets the data requirements for App1.
+   <br/>
+   What should you recommend deploying to each availability zone that contains an instance of App1?
+   <br/>
+  </p>
+  <div class="question-choices-container">
+   <div class="voted-answers-tally d-none">
+    <script id="763056" type="application/json">
+     [{"voted_answers": "A", "vote_count": 9, "is_most_voted": true}]
+    </script>
+   </div>
+   <ul>
+    <li class="multi-choice-item correct-hidden">
+     <span class="multi-choice-letter" data-choice-letter="A">
+      A.
+     </span>
+     an Azure Cosmos DB that uses multi-region writes
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="B">
+      B.
+     </span>
+     an Azure Data Lake store that uses geo-zone-redundant storage (GZRS)
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="C">
+      C.
+     </span>
+     an Azure SQL database that uses active geo-replication
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="D">
+      D.
+     </span>
+     an Azure Storage account that uses geo-zone-redundant storage (GZRS)
+    </li>
+   </ul>
+  </div>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/13/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/13/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    10
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     A
+    </span>
+    <a class="vote-answer-button ml-1 d-print-none" data-toggle="tooltip" href="https://www.examtopics.com/exams/microsoft/az-305/view/13/#" title="Vote an answer">
+     🗳️
+    </a>
+    <br/>
+   </span>
+   <span class="answer-description">
+    Scenario: App1 has the following data requirements:
+    <br/>
+    ✑ Each instance will write data to a data store in the same availability zone as the instance.
+    <br/>
+    ✑ Data written by any App1 instance must be visible to all App1 instances.
+    <br/>
+    Azure Cosmos DB: Each partition across all the regions is replicated. Each region contains all
+                        the data partitions of an Azure Cosmos container and can serve reads as well as serve writes
+                        when multi-region writes is enabled.
+    <br/>
+    Incorrect Answers:
+    <br/>
+    B, D: GZRS protects against failures. Geo-redundant storage (with GRS or GZRS) replicates your
+                        data to another physical location in the secondary region to protect against regional outages.
+                        However, that data is available to be read only if the customer or Microsoft initiates a
+                        failover from the primary to secondary region.
+    <br/>
+    C: Active geo-replication is designed as a business continuity solution that lets you perform
+                        quick disaster recovery of individual databases in case of a regional disaster or a large scale
+                        outage. Once geo-replication is set up, you can initiate a geo-failover to a geo-secondary in a
+                        different Azure region. The geo-failover is initiated programmatically by the application or
+                        manually by the user.
+    <br/>
+    Reference:
+    <br/>
+    https://docs.microsoft.com/en-us/azure/cosmos-db/high-availability
+   </span>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #53
+  <span class="question-title-topic pull-right">
+   Topic 9
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763057">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   <br/>
+   Existing Environment -
+   <br/>
+   <br/>
+   Azure Environment -
+   <br/>
+   Litware has 10 Azure subscriptions that are linked to the Litware.com tenant and five Azure
+                    subscriptions that are linked to the dev.litware.com tenant. All the subscriptions are in an
+                    Enterprise Agreement (EA).
+   <br/>
+   The litware.com tenant contains a custom Azure role-based access control (Azure RBAC) role named
+                    Role1 that grants the DataActions read permission to the blobs and files in Azure Storage.
+   <br/>
+   <br/>
+   On-Premises Environment -
+   <br/>
+   The on-premises network of Litware contains the resources shown in the following table.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0005400001.png"/>
+   <br/>
+   <br/>
+   Network Environment -
+   <br/>
+   Litware has ExpressRoute connectivity to Azure.
+   <br/>
+   Planned Changes and Requirements
+   <br/>
+   Litware plans to implement the following changes:
+   <br/>
+   Migrate DB1 and DB2 to Azure.
+   <br/>
+   Migrate App1 to Azure virtual machines.
+   <br/>
+   Migrate the external storage used by App1 to Azure Storage.
+   <br/>
+   Deploy the Azure virtual machines that will host App1 to Azure dedicated hosts.
+   <br/>
+   Authentication and Authorization Requirements
+   <br/>
+   Litware identifies the following authentication and authorization requirements:
+   <br/>
+   Only users that manage the production environment by using the Azure portal must connect from a
+                    hybrid Azure AD-joined device and authenticate by using
+   <br/>
+   Azure Multi-Factor Authentication (MFA).
+   <br/>
+   The Network Contributor built-in RBAC role must be used to grant permissions to the network
+                    administrators for all the virtual networks in all the Azure subscriptions.
+   <br/>
+   To access the resources in Azure, App1 must use the managed identity of the virtual machines that
+                    will host the app.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0005400008.png"/>
+   <br/>
+   RBAC roles must be applied at the highest level possible.
+   <br/>
+   <br/>
+   Resiliency Requirements -
+   <br/>
+   Litware identifies the following resiliency requirements:
+   <br/>
+   Once migrated to Azure, DB1 and DB2 must meet the following requirements:
+   <br/>
+   - Maintain availability if two availability zones in the local Azure region fail.
+   <br/>
+   - Fail over automatically.
+   <br/>
+   - Minimize I/O latency.
+   <br/>
+   App1 must meet the following requirements:
+   <br/>
+   - Be hosted in an Azure region that supports availability zones.
+   <br/>
+   - Be hosted on Azure virtual machines that support automatic scaling.
+   <br/>
+   - Maintain availability if two availability zones in the local Azure region fail.
+   <br/>
+   Security and Compliance Requirements
+   <br/>
+   Litware identifies the following security and compliance requirements:
+   <br/>
+   Once App1 is migrated to Azure, you must ensure that new data can be written to the app, and the
+                    modification of new and existing data is prevented for a period of three years.
+   <br/>
+   On-premises users and services must be able to access the Azure Storage account that will host the
+                    data in App1.
+   <br/>
+   Access to the public endpoint of the Azure Storage account that will host the App1 data must be
+                    prevented.
+   <br/>
+   All Azure SQL databases in the production environment must have Transparent Data Encryption (TDE)
+                    enabled.
+   <br/>
+   App1 must NOT share physical hardware with other workloads.
+   <br/>
+   <br/>
+   Business Requirements -
+   <br/>
+   Litware identifies the following business requirements:
+   <br/>
+   Minimize administrative effort.
+   <br/>
+   Minimize costs.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   HOTSPOT -
+   <br/>
+   How should the migrated databases DB1 and DB2 be implemented in Azure?
+   <br/>
+   Hot Area:
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0005600001.png"/>
+   <br/>
+  </p>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/14/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/14/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    28
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0005700001.png"/>
+    </span>
+    <br/>
+   </span>
+   <span class="answer-description">
+    Box 1: SQL Managed Instance -
+    <br/>
+    Scenario: Once migrated to Azure, DB1 and DB2 must meet the following requirements:
+    <br/>
+    ✑ Maintain availability if two availability zones in the local Azure region fail.
+    <br/>
+    ✑ Fail over automatically.
+    <br/>
+    ✑ Minimize I/O latency.
+    <br/>
+    The auto-failover groups feature allows you to manage the replication and failover of a group of
+                        databases on a server or all databases in a managed instance to another region. It is a
+                        declarative abstraction on top of the existing active geo-replication feature, designed to
+                        simplify deployment and management of geo- replicated databases at scale. You can initiate a
+                        geo-failover manually or you can delegate it to the Azure service based on a user-defined
+                        policy. The latter option allows you to automatically recover multiple related databases in a
+                        secondary region after a catastrophic failure or other unplanned event that results in full or
+                        partial loss of the SQL Database or SQL Managed Instance availability in the primary region.
+    <br/>
+    <br/>
+    Box 2: Business critical -
+    <br/>
+    SQL Managed Instance is available in two service tiers:
+    <br/>
+    General purpose: Designed for applications with typical performance and I/O latency
+                        requirements.
+    <br/>
+    Business critical: Designed for applications with low I/O latency requirements and minimal
+                        impact of underlying maintenance operations on the workload.
+    <br/>
+    Reference:
+    <br/>
+    https://docs.microsoft.com/en-us/azure/azure-sql/database/auto-failover-group-overview
+                        https://docs.microsoft.com/en-us/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
+   </span>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #54
+  <span class="question-title-topic pull-right">
+   Topic 10
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763058">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs. When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   <br/>
+   Existing Environment -
+   <br/>
+   <br/>
+   Technical Environment -
+   <br/>
+   The on-premises network contains a single Active Directory domain named contoso.com.
+   <br/>
+   Contoso has a single Azure subscription.
+   <br/>
+   <br/>
+   Business Partnerships -
+   <br/>
+   Contoso has a business partnership with Fabrikam, Inc. Fabrikam users access some Contoso
+                    applications over the internet by using Azure Active Directory
+   <br/>
+   (Azure AD) guest accounts.
+   <br/>
+   <br/>
+   Requirements -
+   <br/>
+   <br/>
+   Planned Changes -
+   <br/>
+   Contoso plans to deploy two applications named App1 and App2 to Azure.
+   <br/>
+   <br/>
+   App1 -
+   <br/>
+   App1 will be a Python web app hosted in Azure App Service that requires a Linux runtime. Users from
+                    Contoso and Fabrikam will access App1.
+   <br/>
+   App1 will access several services that require third-party credentials and access strings. The
+                    credentials and access strings are stored in Azure Key Vault.
+   <br/>
+   App1 will have six instances: three in the East US Azure region and three in the West Europe Azure
+                    region.
+   <br/>
+   App1 has the following data requirements:
+   <br/>
+   Each instance will write data to a data store in the same availability zone as the instance.
+   <br/>
+   Data written by any App1 instance must be visible to all App1 instances.
+   <br/>
+   App1 will only be accessible from the internet. App1 has the following connection requirements:
+   <br/>
+   Connections to App1 must pass through a web application firewall (WAF).
+   <br/>
+   Connections to App1 must be active-active load balanced between instances.
+   <br/>
+   All connections to App1 from North America must be directed to the East US region. All other
+                    connections must be directed to the West Europe region.
+   <br/>
+   Every hour, you will run a maintenance task by invoking a PowerShell script that copies files from
+                    all the App1 instances. The PowerShell script will run from a central location.
+   <br/>
+   <br/>
+   App2 -
+   <br/>
+   App2 will be a NET app hosted in App Service that requires a Windows runtime. App2 has the following
+                    file storage requirements:
+   <br/>
+   Save files to an Azure Storage account.
+   <br/>
+   Replicate files to an on-premises location.
+   <br/>
+   Ensure that on-premises clients can read the files over the LAN by using the SMB protocol.
+   <br/>
+   You need to monitor App2 to analyze how long it takes to perform different transactions within the
+                    application. The solution must not require changes to the application code.
+   <br/>
+   Application Development Requirements
+   <br/>
+   Application developers will constantly develop new versions of App1 and App2. The development
+                    process must meet the following requirements:
+   <br/>
+   A staging instance of a new application version must be deployed to the application host before the
+                    new version is used in production.
+   <br/>
+   After testing the new version, the staging version of the application will replace the production
+                    version.
+   <br/>
+   The switch to the new application version from staging to production must occur without any downtime
+                    of the application.
+   <br/>
+   <br/>
+   Identity Requirements -
+   <br/>
+   Contoso identifies the following requirements for managing Fabrikam access to resources:
+   <br/>
+   Every month, an account manager at Fabrikam must review which Fabrikam users have access permissions
+                    to App1. Accounts that no longer need permissions must be removed as guests.
+   <br/>
+   The solution must minimize development effort.
+   <br/>
+   <br/>
+   Security Requirement -
+   <br/>
+   All secrets used by Azure services must be stored in Azure Key Vault.
+   <br/>
+   Services that require credentials must have the credentials tied to the service instance. The
+                    credentials must NOT be shared between services.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   HOTSPOT -
+   <br/>
+   You need to recommend a solution to ensure that App1 can access the third-party credentials and
+                    access strings. The solution must meet the security requirements.
+   <br/>
+   What should you include in the recommendation? To answer, select the appropriate options in the
+                    answer area.
+   <br/>
+   NOTE: Each correct selection is worth one point.
+   <br/>
+   Hot Area:
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0007100001.png"/>
+   <br/>
+  </p>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/14/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/14/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    29
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0007200001.png"/>
+    </span>
+    <br/>
+   </span>
+   <span class="answer-description">
+    Scenario: Security Requirement -
+    <br/>
+    All secrets used by Azure services must be stored in Azure Key Vault.
+    <br/>
+    Services that require credentials must have the credentials tied to the service instance. The
+                        credentials must NOT be shared between services.
+    <br/>
+    <br/>
+    Box 1: A service principal -
+    <br/>
+    A service principal is a type of security principal that identifies an application or service,
+                        which is to say, a piece of code rather than a user or group. A service principal's object ID is
+                        known as its client ID and acts like its username. The service principal's client secret acts
+                        like its password.
+    <br/>
+    Note: Authentication with Key Vault works in conjunction with Azure Active Directory (Azure AD),
+                        which is responsible for authenticating the identity of any given security principal.
+    <br/>
+    A security principal is an object that represents a user, group, service, or application that's
+                        requesting access to Azure resources. Azure assigns a unique object
+    <br/>
+    ID to every security principal.
+    <br/>
+    <br/>
+    Box 2: A role assignment -
+    <br/>
+    You can provide access to Key Vault keys, certificates, and secrets with an Azure role-based
+                        access control.
+    <br/>
+    Reference:
+    <br/>
+    https://docs.microsoft.com/en-us/azure/key-vault/general/authentication
+   </span>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #55
+  <span class="question-title-topic pull-right">
+   Topic 11
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763059">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs. When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   <br/>
+   Overview -
+   <br/>
+   Fabrikam, Inc. is an engineering company that has offices throughout Europe. The company has a main
+                    office in London and three branch offices in Amsterdam,
+   <br/>
+   Berlin, and Rome.
+   <br/>
+   Existing Environment: Active Directory Environment
+   <br/>
+   The network contains two Active Directory forests named corp.fabrikam.com and rd.fabrikam.com. There
+                    are no trust relationships between the forests.
+   <br/>
+   Corp.fabrikam.com is a production forest that contains identities used for internal user and
+                    computer authentication.
+   <br/>
+   Rd.fabrikam.com is used by the research and development (R&amp;D) department only. The R&amp;D
+                    department is restricted to using on-premises resources only.
+   <br/>
+   Existing Environment: Network Infrastructure
+   <br/>
+   Each office contains at least one domain controller from the corp.fabrikam.com domain. The main
+                    office contains all the domain controllers for the rd.fabrikam.com forest.
+   <br/>
+   All the offices have a high-speed connection to the internet.
+   <br/>
+   An existing application named WebApp1 is hosted in the data center of the London office. WebApp1 is
+                    used by customers to place and track orders. WebApp1 has a web tier that uses Microsoft Internet
+                    information Services (IIS) and a database tier that runs Microsoft SQL Server 2016. The web tier and
+                    the database tier are deployed to virtual machines that run on Hyper-V.
+   <br/>
+   The IT department currently uses a separate Hyper-V environment to test updates to WebApp1.
+   <br/>
+   Fabrikam purchases all Microsoft licenses through a Microsoft Enterprise Agreement that includes
+                    Software Assurance.
+   <br/>
+   Existing Environment: Problem Statements
+   <br/>
+   The use of WebApp1 is unpredictable. At peak times, users often report delays. At other times, many
+                    resources for WebApp1 are underutilized.
+   <br/>
+   <br/>
+   Requirements: Planned Changes -
+   <br/>
+   Fabrikam plans to move most of its production workloads to Azure during the next few years,
+                    including virtual machines that rely on Active Directory for authentication.
+   <br/>
+   As one of its first projects, the company plans to establish a hybrid identity model, facilitating
+                    an upcoming Microsoft 365 deployment.
+   <br/>
+   All R&amp;D operations will remain on-premises.
+   <br/>
+   Fabrikam plans to migrate the production and test instances of WebApp1 to Azure.
+   <br/>
+   Requirements: Technical Requirements
+   <br/>
+   Fabrikam identifies the following technical requirements:
+   <br/>
+   Website content must be easily updated from a single point.
+   <br/>
+   User input must be minimized when provisioning new web app instances.
+   <br/>
+   Whenever possible, existing on-premises licenses must be used to reduce cost.
+   <br/>
+   Users must always authenticate by using their corp.fabrikam.com UPN identity.
+   <br/>
+   Any new deployments to Azure must be redundant in case an Azure region fails.
+   <br/>
+   Whenever possible, solutions must be deployed to Azure by using the Standard pricing tier of Azure
+                    App Service.
+   <br/>
+   An email distribution group named IT Support must be notified of any issues relating to the
+                    directory synchronization services.
+   <br/>
+   In the event that a link fails between Azure and the on-premises network, ensure that the virtual
+                    machines hosted in Azure can authenticate to Active Directory.
+   <br/>
+   Directory synchronization between Azure Active Directory (Azure AD) and corp.fabrikam.com must not
+                    be affected by a link failure between Azure and the on- premises network.
+   <br/>
+   Requirements: Database Requirements
+   <br/>
+   Fabrikam identifies the following database requirements:
+   <br/>
+   Database metrics for the production instance of WebApp1 must be available for analysis so that
+                    database administrators can optimize the performance settings.
+   <br/>
+   To avoid disrupting customer access, database downtime must be minimized when databases are
+                    migrated.
+   <br/>
+   Database backups must be retained for a minimum of seven years to meet compliance requirements.
+   <br/>
+   Requirements: Security Requirements
+   <br/>
+   Fabrikam identifies the following security requirements:
+   <br/>
+   Company information including policies, templates, and data must be inaccessible to anyone outside
+                    the company.
+   <br/>
+   Users on the on-premises network must be able to authenticate to corp.fabrikam.com if an internet
+                    link fails.
+   <br/>
+   Administrators must be able authenticate to the Azure portal by using their corp.fabrikam.com
+                    credentials.
+   <br/>
+   All administrative access to the Azure portal must be secured by using multi-factor authentication
+                    (MFA).
+   <br/>
+   The testing of WebApp1 updates must not be visible to anyone outside the company.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   HOTSPOT -
+   <br/>
+   You are evaluating the components of the migration to Azure that require you to provision an Azure
+                    Storage account. For each of the following statements, select
+   <br/>
+   Yes if the statement is true. Otherwise, select No.
+   <br/>
+   NOTE: Each correct selection is worth one point.
+   <br/>
+   Hot Area:
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0007600009.png"/>
+   <br/>
+  </p>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/14/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/14/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    22
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0007700001.png"/>
+    </span>
+    <br/>
+   </span>
+   <span class="answer-description">
+   </span>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #56
+  <span class="question-title-topic pull-right">
+   Topic 11
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763060">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs. When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   <br/>
+   Overview -
+   <br/>
+   Fabrikam, Inc. is an engineering company that has offices throughout Europe. The company has a main
+                    office in London and three branch offices in Amsterdam,
+   <br/>
+   Berlin, and Rome.
+   <br/>
+   Existing Environment: Active Directory Environment
+   <br/>
+   The network contains two Active Directory forests named corp.fabrikam.com and rd.fabrikam.com. There
+                    are no trust relationships between the forests.
+   <br/>
+   Corp.fabrikam.com is a production forest that contains identities used for internal user and
+                    computer authentication.
+   <br/>
+   Rd.fabrikam.com is used by the research and development (R&amp;D) department only. The R&amp;D
+                    department is restricted to using on-premises resources only.
+   <br/>
+   Existing Environment: Network Infrastructure
+   <br/>
+   Each office contains at least one domain controller from the corp.fabrikam.com domain. The main
+                    office contains all the domain controllers for the rd.fabrikam.com forest.
+   <br/>
+   All the offices have a high-speed connection to the internet.
+   <br/>
+   An existing application named WebApp1 is hosted in the data center of the London office. WebApp1 is
+                    used by customers to place and track orders. WebApp1 has a web tier that uses Microsoft Internet
+                    information Services (IIS) and a database tier that runs Microsoft SQL Server 2016. The web tier and
+                    the database tier are deployed to virtual machines that run on Hyper-V.
+   <br/>
+   The IT department currently uses a separate Hyper-V environment to test updates to WebApp1.
+   <br/>
+   Fabrikam purchases all Microsoft licenses through a Microsoft Enterprise Agreement that includes
+                    Software Assurance.
+   <br/>
+   Existing Environment: Problem Statements
+   <br/>
+   The use of WebApp1 is unpredictable. At peak times, users often report delays. At other times, many
+                    resources for WebApp1 are underutilized.
+   <br/>
+   <br/>
+   Requirements: Planned Changes -
+   <br/>
+   Fabrikam plans to move most of its production workloads to Azure during the next few years,
+                    including virtual machines that rely on Active Directory for authentication.
+   <br/>
+   As one of its first projects, the company plans to establish a hybrid identity model, facilitating
+                    an upcoming Microsoft 365 deployment.
+   <br/>
+   All R&amp;D operations will remain on-premises.
+   <br/>
+   Fabrikam plans to migrate the production and test instances of WebApp1 to Azure.
+   <br/>
+   Requirements: Technical Requirements
+   <br/>
+   Fabrikam identifies the following technical requirements:
+   <br/>
+   Website content must be easily updated from a single point.
+   <br/>
+   User input must be minimized when provisioning new web app instances.
+   <br/>
+   Whenever possible, existing on-premises licenses must be used to reduce cost.
+   <br/>
+   Users must always authenticate by using their corp.fabrikam.com UPN identity.
+   <br/>
+   Any new deployments to Azure must be redundant in case an Azure region fails.
+   <br/>
+   Whenever possible, solutions must be deployed to Azure by using the Standard pricing tier of Azure
+                    App Service.
+   <br/>
+   An email distribution group named IT Support must be notified of any issues relating to the
+                    directory synchronization services.
+   <br/>
+   In the event that a link fails between Azure and the on-premises network, ensure that the virtual
+                    machines hosted in Azure can authenticate to Active Directory.
+   <br/>
+   Directory synchronization between Azure Active Directory (Azure AD) and corp.fabrikam.com must not
+                    be affected by a link failure between Azure and the on- premises network.
+   <br/>
+   Requirements: Database Requirements
+   <br/>
+   Fabrikam identifies the following database requirements:
+   <br/>
+   Database metrics for the production instance of WebApp1 must be available for analysis so that
+                    database administrators can optimize the performance settings.
+   <br/>
+   To avoid disrupting customer access, database downtime must be minimized when databases are
+                    migrated.
+   <br/>
+   Database backups must be retained for a minimum of seven years to meet compliance requirements.
+   <br/>
+   Requirements: Security Requirements
+   <br/>
+   Fabrikam identifies the following security requirements:
+   <br/>
+   Company information including policies, templates, and data must be inaccessible to anyone outside
+                    the company.
+   <br/>
+   Users on the on-premises network must be able to authenticate to corp.fabrikam.com if an internet
+                    link fails.
+   <br/>
+   Administrators must be able authenticate to the Azure portal by using their corp.fabrikam.com
+                    credentials.
+   <br/>
+   All administrative access to the Azure portal must be secured by using multi-factor authentication
+                    (MFA).
+   <br/>
+   The testing of WebApp1 updates must not be visible to anyone outside the company.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   What should you include in the identity management strategy to support the planned changes?
+   <br/>
+  </p>
+  <div class="question-choices-container">
+   <div class="voted-answers-tally d-none">
+    <script id="763060" type="application/json">
+     [{"voted_answers": "A", "vote_count": 13, "is_most_voted": true}]
+    </script>
+   </div>
+   <ul>
+    <li class="multi-choice-item correct-hidden">
+     <span class="multi-choice-letter" data-choice-letter="A">
+      A.
+     </span>
+     Deploy domain controllers for corp.fabrikam.com to virtual networks in Azure.
+     <span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+      Most Voted
+     </span>
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="B">
+      B.
+     </span>
+     Move all the domain controllers from corp.fabrikam.com to virtual networks in Azure.
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="C">
+      C.
+     </span>
+     Deploy a new Azure AD tenant for the authentication of new R&amp;D projects.
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="D">
+      D.
+     </span>
+     Deploy domain controllers for the rd.fabrikam.com forest to virtual networks in Azure.
+    </li>
+   </ul>
+  </div>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/14/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/14/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    5
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     A
+    </span>
+    <a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="https://www.examtopics.com/exams/microsoft/az-305/view/14/#" title="">
+     🗳️
+    </a>
+    <br/>
+   </span>
+   <span class="answer-description">
+    Directory synchronization between Azure Active Directory (Azure AD) and corp.fabrikam.com must
+                        not be affected by a link failure between Azure and the on- premises network. (This requires
+                        domain controllers in Azure).
+    <br/>
+    Users on the on-premises network must be able to authenticate to corp.fabrikam.com if an
+                        Internet link fails. (This requires domain controllers on-premises).
+   </span>
+   <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em">
+    <i>
+     Community vote distribution
+    </i>
+    <!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>-->
+    <div class="progress vote-distribution-bar">
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="13 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">
+      A (100%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">
+      C (25%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">
+      B (20%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">
+      Other
+     </div>
+    </div>
+   </div>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #57
+  <span class="question-title-topic pull-right">
+   Topic 12
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763061">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   <br/>
+   Existing Environment -
+   <br/>
+   <br/>
+   Azure Environment -
+   <br/>
+   Litware has 10 Azure subscriptions that are linked to the Litware.com tenant and five Azure
+                    subscriptions that are linked to the dev.litware.com tenant. All the subscriptions are in an
+                    Enterprise Agreement (EA).
+   <br/>
+   The litware.com tenant contains a custom Azure role-based access control (Azure RBAC) role named
+                    Role1 that grants the DataActions read permission to the blobs and files in Azure Storage.
+   <br/>
+   <br/>
+   On-Premises Environment -
+   <br/>
+   The on-premises network of Litware contains the resources shown in the following table.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0007900001.png"/>
+   <br/>
+   <br/>
+   Network Environment -
+   <br/>
+   Litware has ExpressRoute connectivity to Azure.
+   <br/>
+   Planned Changes and Requirements
+   <br/>
+   Litware plans to implement the following changes:
+   <br/>
+   Migrate DB1 and DB2 to Azure.
+   <br/>
+   Migrate App1 to Azure virtual machines.
+   <br/>
+   Migrate the external storage used by App1 to Azure Storage.
+   <br/>
+   Deploy the Azure virtual machines that will host App1 to Azure dedicated hosts.
+   <br/>
+   Authentication and Authorization Requirements
+   <br/>
+   Litware identifies the following authentication and authorization requirements:
+   <br/>
+   Only users that manage the production environment by using the Azure portal must connect from a
+                    hybrid Azure AD-joined device and authenticate by using
+   <br/>
+   Azure Multi-Factor Authentication (MFA).
+   <br/>
+   The Network Contributor built-in RBAC role must be used to grant permissions to the network
+                    administrators for all the virtual networks in all the Azure subscriptions.
+   <br/>
+   To access the resources in Azure, App1 must use the managed identity of the virtual machines that
+                    will host the app.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0007900008.png"/>
+   <br/>
+   RBAC roles must be applied at the highest level possible.
+   <br/>
+   <br/>
+   Resiliency Requirements -
+   <br/>
+   Litware identifies the following resiliency requirements:
+   <br/>
+   Once migrated to Azure, DB1 and DB2 must meet the following requirements:
+   <br/>
+   - Maintain availability if two availability zones in the local Azure region fail.
+   <br/>
+   - Fail over automatically.
+   <br/>
+   - Minimize I/O latency.
+   <br/>
+   App1 must meet the following requirements:
+   <br/>
+   - Be hosted in an Azure region that supports availability zones.
+   <br/>
+   - Be hosted on Azure virtual machines that support automatic scaling.
+   <br/>
+   - Maintain availability if two availability zones in the local Azure region fail.
+   <br/>
+   Security and Compliance Requirements
+   <br/>
+   Litware identifies the following security and compliance requirements:
+   <br/>
+   Once App1 is migrated to Azure, you must ensure that new data can be written to the app, and the
+                    modification of new and existing data is prevented for a period of three years.
+   <br/>
+   On-premises users and services must be able to access the Azure Storage account that will host the
+                    data in App1.
+   <br/>
+   Access to the public endpoint of the Azure Storage account that will host the App1 data must be
+                    prevented.
+   <br/>
+   All Azure SQL databases in the production environment must have Transparent Data Encryption (TDE)
+                    enabled.
+   <br/>
+   App1 must NOT share physical hardware with other workloads.
+   <br/>
+   <br/>
+   Business Requirements -
+   <br/>
+   Litware identifies the following business requirements:
+   <br/>
+   Minimize administrative effort.
+   <br/>
+   Minimize costs.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   HOTSPOT -
+   <br/>
+   You plan to migrate App1 to Azure.
+   <br/>
+   You need to recommend a storage solution for App1 that meets the security and compliance
+                    requirements.
+   <br/>
+   Which type of storage should you recommend, and how should you recommend configuring the storage? To
+                    answer, select the appropriate options in the answer area.
+   <br/>
+   NOTE: Each correct selection is worth one point.
+   <br/>
+   Hot Area:
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0008100001.png"/>
+   <br/>
+  </p>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/15/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/15/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    20
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0008200001.png"/>
+    </span>
+    <br/>
+   </span>
+   <span class="answer-description">
+    Box 1: Standard general-purpose v2
+    <br/>
+    Standard general-purpose v2 supports Blob Storage.
+    <br/>
+    Azure Storage provides data protection for Blob Storage and Azure Data Lake Storage Gen2.
+    <br/>
+    Scenario:
+    <br/>
+    Litware identifies the following security and compliance requirements:
+    <br/>
+    ✑ Once App1 is migrated to Azure, you must ensure that new data can be written to the app, and
+                        the modification of new and existing data is prevented for a period of three years.
+    <br/>
+    ✑ On-premises users and services must be able to access the Azure Storage account that will host
+                        the data in App1.
+    <br/>
+    ✑ Access to the public endpoint of the Azure Storage account that will host the App1 data must
+                        be prevented.
+    <br/>
+    ✑ All Azure SQL databases in the production environment must have Transparent Data Encryption
+                        (TDE) enabled.
+    <br/>
+    App1 must NOT share physical hardware with other workloads.
+    <br/>
+    <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0008200006.png"/>
+    <br/>
+    <br/>
+    Box 2: NFSv3 -
+    <br/>
+    Scenario: Plan: Migrate App1 to Azure virtual machines.
+    <br/>
+    Blob storage now supports the Network File System (NFS) 3.0 protocol. This support provides
+                        Linux file system compatibility at object storage scale and prices and enables Linux clients to
+                        mount a container in Blob storage from an Azure Virtual Machine (VM) or a computer on-premises.
+    <br/>
+    Reference:
+    <br/>
+    https://docs.microsoft.com/en-us/azure/storage/blobs/data-protection-overview
+   </span>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #58
+  <span class="question-title-topic pull-right">
+   Topic 12
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763062">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   <br/>
+   Existing Environment -
+   <br/>
+   <br/>
+   Azure Environment -
+   <br/>
+   Litware has 10 Azure subscriptions that are linked to the Litware.com tenant and five Azure
+                    subscriptions that are linked to the dev.litware.com tenant. All the subscriptions are in an
+                    Enterprise Agreement (EA).
+   <br/>
+   The litware.com tenant contains a custom Azure role-based access control (Azure RBAC) role named
+                    Role1 that grants the DataActions read permission to the blobs and files in Azure Storage.
+   <br/>
+   <br/>
+   On-Premises Environment -
+   <br/>
+   The on-premises network of Litware contains the resources shown in the following table.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0007900001.png"/>
+   <br/>
+   <br/>
+   Network Environment -
+   <br/>
+   Litware has ExpressRoute connectivity to Azure.
+   <br/>
+   Planned Changes and Requirements
+   <br/>
+   Litware plans to implement the following changes:
+   <br/>
+   Migrate DB1 and DB2 to Azure.
+   <br/>
+   Migrate App1 to Azure virtual machines.
+   <br/>
+   Migrate the external storage used by App1 to Azure Storage.
+   <br/>
+   Deploy the Azure virtual machines that will host App1 to Azure dedicated hosts.
+   <br/>
+   Authentication and Authorization Requirements
+   <br/>
+   Litware identifies the following authentication and authorization requirements:
+   <br/>
+   Only users that manage the production environment by using the Azure portal must connect from a
+                    hybrid Azure AD-joined device and authenticate by using
+   <br/>
+   Azure Multi-Factor Authentication (MFA).
+   <br/>
+   The Network Contributor built-in RBAC role must be used to grant permissions to the network
+                    administrators for all the virtual networks in all the Azure subscriptions.
+   <br/>
+   To access the resources in Azure, App1 must use the managed identity of the virtual machines that
+                    will host the app.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0007900008.png"/>
+   <br/>
+   RBAC roles must be applied at the highest level possible.
+   <br/>
+   <br/>
+   Resiliency Requirements -
+   <br/>
+   Litware identifies the following resiliency requirements:
+   <br/>
+   Once migrated to Azure, DB1 and DB2 must meet the following requirements:
+   <br/>
+   - Maintain availability if two availability zones in the local Azure region fail.
+   <br/>
+   - Fail over automatically.
+   <br/>
+   - Minimize I/O latency.
+   <br/>
+   App1 must meet the following requirements:
+   <br/>
+   - Be hosted in an Azure region that supports availability zones.
+   <br/>
+   - Be hosted on Azure virtual machines that support automatic scaling.
+   <br/>
+   - Maintain availability if two availability zones in the local Azure region fail.
+   <br/>
+   Security and Compliance Requirements
+   <br/>
+   Litware identifies the following security and compliance requirements:
+   <br/>
+   Once App1 is migrated to Azure, you must ensure that new data can be written to the app, and the
+                    modification of new and existing data is prevented for a period of three years.
+   <br/>
+   On-premises users and services must be able to access the Azure Storage account that will host the
+                    data in App1.
+   <br/>
+   Access to the public endpoint of the Azure Storage account that will host the App1 data must be
+                    prevented.
+   <br/>
+   All Azure SQL databases in the production environment must have Transparent Data Encryption (TDE)
+                    enabled.
+   <br/>
+   App1 must NOT share physical hardware with other workloads.
+   <br/>
+   <br/>
+   Business Requirements -
+   <br/>
+   Litware identifies the following business requirements:
+   <br/>
+   Minimize administrative effort.
+   <br/>
+   Minimize costs.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   You plan to migrate App1 to Azure.
+   <br/>
+   You need to recommend a network connectivity solution for the Azure Storage account that will host
+                    the App1 data. The solution must meet the security and compliance requirements.
+   <br/>
+   What should you include in the recommendation?
+   <br/>
+  </p>
+  <div class="question-choices-container">
+   <div class="voted-answers-tally d-none">
+    <script id="763062" type="application/json">
+     [{"voted_answers": "D", "vote_count": 3, "is_most_voted": false}]
+    </script>
+   </div>
+   <ul>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="A">
+      A.
+     </span>
+     Microsoft peering for an ExpressRoute circuit
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="B">
+      B.
+     </span>
+     Azure public peering for an ExpressRoute circuit
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="C">
+      C.
+     </span>
+     a service endpoint that has a service endpoint policy
+    </li>
+    <li class="multi-choice-item correct-hidden">
+     <span class="multi-choice-letter" data-choice-letter="D">
+      D.
+     </span>
+     a private endpoint
+    </li>
+   </ul>
+  </div>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/15/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/15/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    8
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     D
+    </span>
+    <a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="https://www.examtopics.com/exams/microsoft/az-305/view/15/#" title="">
+     🗳️
+    </a>
+    <br/>
+   </span>
+   <span class="answer-description">
+    Private Endpoint securely connect to storage accounts from on-premises networks that connect to
+                        the VNet using VPN or ExpressRoutes with private-peering.
+    <br/>
+    Private Endpoint also secure your storage account by configuring the storage firewall to block
+                        all connections on the public endpoint for the storage service.
+    <br/>
+    Incorrect Answers:
+    <br/>
+    A: Microsoft peering provides access to Azure public services via public endpoints with public
+                        IP addresses, which should not be allowed.
+    <br/>
+    B: Azure public peering has been deprecated.
+    <br/>
+    C: By default, Service Endpoints are enabled on subnets configured in Azure virtual networks.
+                        Endpoints can't be used for traffic from your premises to Azure services.
+    <br/>
+    Reference:
+    <br/>
+    https://docs.microsoft.com/en-us/azure/expressroute/expressroute-circuit-peerings
+   </span>
+   <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em">
+    <i>
+     Community vote distribution
+    </i>
+    <!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>-->
+    <div class="progress vote-distribution-bar">
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">
+      D (100%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">
+      C (25%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">
+      B (20%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">
+      Other
+     </div>
+    </div>
+   </div>
+  </p>
+ </div>
+</div>
+<div class="card exam-question-card">
+ <div class="card-header text-white bg-primary">
+  Question #59
+  <span class="question-title-topic pull-right">
+   Topic 12
+  </span>
+ </div>
+ <div class="card-body question-body" data-id="763063">
+  <p class="card-text">
+   <span class="inquestion-subtitle mb-0 mt-0">
+    Introductory Info
+   </span>
+   Case Study -
+   <br/>
+   This is a case study. Case studies are not timed separately. You can use as much exam time as you
+                    would like to complete each case. However, there may be additional case studies and sections on this
+                    exam. You must manage your time to ensure that you are able to complete all questions included on
+                    this exam in the time provided.
+   <br/>
+   To answer the questions included in a case study, you will need to reference information that is
+                    provided in the case study. Case studies might contain exhibits and other resources that provide
+                    more information about the scenario that is described in the case study. Each question is
+                    independent of the other questions in this case study.
+   <br/>
+   At the end of this case study, a review screen will appear. This screen allows you to review your
+                    answers and to make changes before you move to the next section of the exam. After you begin a new
+                    section, you cannot return to this section.
+   <br/>
+   <br/>
+   To start the case study -
+   <br/>
+   To display the first question in this case study, click the Next button. Use the buttons in the left
+                    pane to explore the content of the case study before you answer the questions. Clicking these
+                    buttons displays information such as business requirements, existing environment, and problem
+                    statements. If the case study has an All Information tab, note that the information displayed is
+                    identical to the information displayed on the subsequent tabs When you are ready to answer a
+                    question, click the Question button to return to the question.
+   <br/>
+   <br/>
+   Existing Environment -
+   <br/>
+   <br/>
+   Azure Environment -
+   <br/>
+   Litware has 10 Azure subscriptions that are linked to the Litware.com tenant and five Azure
+                    subscriptions that are linked to the dev.litware.com tenant. All the subscriptions are in an
+                    Enterprise Agreement (EA).
+   <br/>
+   The litware.com tenant contains a custom Azure role-based access control (Azure RBAC) role named
+                    Role1 that grants the DataActions read permission to the blobs and files in Azure Storage.
+   <br/>
+   <br/>
+   On-Premises Environment -
+   <br/>
+   The on-premises network of Litware contains the resources shown in the following table.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0007900001.png"/>
+   <br/>
+   <br/>
+   Network Environment -
+   <br/>
+   Litware has ExpressRoute connectivity to Azure.
+   <br/>
+   Planned Changes and Requirements
+   <br/>
+   Litware plans to implement the following changes:
+   <br/>
+   Migrate DB1 and DB2 to Azure.
+   <br/>
+   Migrate App1 to Azure virtual machines.
+   <br/>
+   Migrate the external storage used by App1 to Azure Storage.
+   <br/>
+   Deploy the Azure virtual machines that will host App1 to Azure dedicated hosts.
+   <br/>
+   Authentication and Authorization Requirements
+   <br/>
+   Litware identifies the following authentication and authorization requirements:
+   <br/>
+   Only users that manage the production environment by using the Azure portal must connect from a
+                    hybrid Azure AD-joined device and authenticate by using
+   <br/>
+   Azure Multi-Factor Authentication (MFA).
+   <br/>
+   The Network Contributor built-in RBAC role must be used to grant permissions to the network
+                    administrators for all the virtual networks in all the Azure subscriptions.
+   <br/>
+   To access the resources in Azure, App1 must use the managed identity of the virtual machines that
+                    will host the app.
+   <br/>
+   <img class="in-exam-image" src="https://examtopics.com/assets/media/exam-media/04082/0007900008.png"/>
+   <br/>
+   RBAC roles must be applied at the highest level possible.
+   <br/>
+   <br/>
+   Resiliency Requirements -
+   <br/>
+   Litware identifies the following resiliency requirements:
+   <br/>
+   Once migrated to Azure, DB1 and DB2 must meet the following requirements:
+   <br/>
+   - Maintain availability if two availability zones in the local Azure region fail.
+   <br/>
+   - Fail over automatically.
+   <br/>
+   - Minimize I/O latency.
+   <br/>
+   App1 must meet the following requirements:
+   <br/>
+   - Be hosted in an Azure region that supports availability zones.
+   <br/>
+   - Be hosted on Azure virtual machines that support automatic scaling.
+   <br/>
+   - Maintain availability if two availability zones in the local Azure region fail.
+   <br/>
+   Security and Compliance Requirements
+   <br/>
+   Litware identifies the following security and compliance requirements:
+   <br/>
+   Once App1 is migrated to Azure, you must ensure that new data can be written to the app, and the
+                    modification of new and existing data is prevented for a period of three years.
+   <br/>
+   On-premises users and services must be able to access the Azure Storage account that will host the
+                    data in App1.
+   <br/>
+   Access to the public endpoint of the Azure Storage account that will host the App1 data must be
+                    prevented.
+   <br/>
+   All Azure SQL databases in the production environment must have Transparent Data Encryption (TDE)
+                    enabled.
+   <br/>
+   App1 must NOT share physical hardware with other workloads.
+   <br/>
+   <br/>
+   Business Requirements -
+   <br/>
+   Litware identifies the following business requirements:
+   <br/>
+   Minimize administrative effort.
+   <br/>
+   Minimize costs.
+   <span class="inquestion-subtitle mb-0 mt-3">
+    Question
+   </span>
+   You need to implement the Azure RBAC role assignments for the Network Contributor role. The solution
+                    must meet the authentication and authorization requirements.
+   <br/>
+   What is the minimum number of assignments that you must use?
+   <br/>
+  </p>
+  <div class="question-choices-container">
+   <div class="voted-answers-tally d-none">
+    <script id="763063" type="application/json">
+     [{"voted_answers": "B", "vote_count": 32, "is_most_voted": true}, {"voted_answers": "A", "vote_count": 8, "is_most_voted": false}]
+    </script>
+   </div>
+   <ul>
+    <li class="multi-choice-item correct-hidden">
+     <span class="multi-choice-letter" data-choice-letter="A">
+      A.
+     </span>
+     1
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="B">
+      B.
+     </span>
+     2
+     <span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+      Most Voted
+     </span>
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="C">
+      C.
+     </span>
+     5
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="D">
+      D.
+     </span>
+     10
+    </li>
+    <li class="multi-choice-item">
+     <span class="multi-choice-letter" data-choice-letter="E">
+      E.
+     </span>
+     15
+    </li>
+   </ul>
+  </div>
+  <a class="btn btn-primary reveal-solution d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/15/#">
+   Reveal Solution
+  </a>
+  <a class="btn btn-primary hide-solution d-none d-print-none" href="https://www.examtopics.com/exams/microsoft/az-305/view/15/#">
+   Hide Solution
+  </a>
+  <a class="btn btn-secondary question-discussion-button d-print-none" href="#">
+   <i class="fa fa-comment">
+   </i>
+   Discussion
+   <span class="badge badge-pill badge-light">
+    25
+   </span>
+  </a>
+  <p class="card-text question-answer bg-light white-text">
+   <span class="correct-answer-box">
+    <strong>
+     Correct Answer:
+    </strong>
+    <span class="correct-answer">
+     A
+    </span>
+    <a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="https://www.examtopics.com/exams/microsoft/az-305/view/15/#" title="">
+     🗳️
+    </a>
+    <br/>
+   </span>
+   <span class="answer-description">
+    Scenario: The Network Contributor built-in RBAC role must be used to grant permissions to the
+                        network administrators for all the virtual networks in all the Azure subscriptions.
+    <br/>
+    RBAC roles must be applied at the highest level possible.
+   </span>
+   <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em">
+    <i>
+     Community vote distribution
+    </i>
+    <!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>-->
+    <div class="progress vote-distribution-bar">
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="32 votes." data-toggle="tooltip" role="progressbar" style="width: 80%; display: flex;" title="">
+      B (80%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 20%; display: flex;" title="">
+      A (20%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">
+      B (20%)
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">
+      Other
+     </div>
+    </div>
+   </div>
+  </p>
+ </div>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://www.examtopics.com/assets/js/comments.js"></script>
+    <!-- / Comments dependencies -->
+<script type="text/javascript" src="https://www.examtopics.com/assets/js/examview.js"></script>
+        </script>
+        <script type="text/javascript">
+            /* DISCUSSIONS: */
+            /* Discussion modal opened */
+            $('body').on('click', ".question-discussion-button[href='#']", function (e) {
+                e.preventDefault();
+                let question_id = $(this).closest('.question-body').attr('data-id');
+                resetDiscussionModal();
+                loadDiscussionIntoModal(question_id);
+                $('#discussion-modal').modal('show');
+            });
+            function resetDiscussionModal() {
+                $('.discussion-loading-title').show();
+                $('.discussion-ellipsis').show();
+                $('.discussion-real-title').hide();
+                $('.discussion-body').hide();
+            }
+            function loadDiscussionIntoModal(question_id, open_voting_comment) {
+                $.ajax({
+                    url: 'https://nandy-cors.herokuapp.com/https://www.examtopics.com/ajax/discussion/exam-question/' + question_id.toString(),
+                    success: function (data) {
+                        console.log(data)
+                        $('.discussion-body').html(data);
+                        $('#discussion-modal').attr("data-discussion-question-id", question_id);
+                        $('.discussion-real-title').text($('.discussion-body').find('.new-comment-box').data('title'));
+                        let question_object = getQuestionObjectByQuestionId(question_id);
+                        if (is_question_mcq(question_object)) {
+                            set_voting_configuration_by_question(question_object);
+                            if (open_voting_comment) {
+                                enable_voted_comment($("#discussion-modal .outer-discussion-container"));
+                            }
+                        }
+                    },
+                    error: function () {
+                        $('.discussion-body').text('Server error: could not load discussion.')
+                    },
+                    complete: function () {
+                        $('.discussion-loading-title').hide();
+                        $('.discussion-ellipsis').hide();
+                        $('.discussion-real-title').show();
+                        $('.discussion-body').slideDown();
+                    }
+                });
+            }
+            /* END DISCUSSIONS */
+    </script>
+    <!-- Discussion modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="discussion-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">
+                        <span class="discussion-loading-title">
+                            Loading discussion
+                            <i class="ml-2 fa fa-refresh fa-spin"></i>
+                        </span>
+                        <span class="discussion-real-title display-none">
+                            <!-- Placehodler for real discussion title -->
+                        </span>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="discussion-body">
+                    </div>
+                    <div class="discussion-ellipsis">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / Discussion modal -->
+    <div id="discussion-templates" class="d-none"><!-- Most Voted Answer badge --><div id="most-voted-answer-badge-template"><span class="badge badge-success most-voted-answer-badge" title="This answer is currently the most voted for in the discussion">
+                Most Voted
+            </span></div><!-- Voting Comment Tooltip Content --><div id="voting-comment-tooltip" class="d-none"><div class="text-left">
+                A voting comment increases the vote count for the chosen answer by one. <br><br>
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+            </div></div><div id="edit-comment-template"><textarea class="comment-edit" style="width:100%"></textarea><br><div class="original-comment d-none"></div><a href="https://www.examtopics.com/exams/microsoft/az-204/view/#" class="btn-primary btn btn-sm comment-edit-save mr-2">Save</a><a href="https://www.examtopics.com/exams/microsoft/az-204/view/#" class="btn-warning btn btn-sm comment-edit-cancel">Cancel</a></div><div class="full-discussion-loading-spinner">
+            Loading <i class="fa fa-cog fa-spin"></i> ...
+        </div></div><!-- Report Comment Modal --><div class="modal fade" id="report-comment-modal" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-sm modal-dialog modal-dialog-centered"><div class="modal-content"><!-- Modal Header --><div class="modal-header"><h4 class="modal-title">Report Comment</h4><button type="button" class="close" data-dismiss="modal">×</button></div><!-- Modal body --><div class="modal-body">
+                    Is the comment made by <span class="comment-report-modal-username font-italic">USERNAME</span> spam or abusive?
+                </div><!-- Modal footer --><div class="modal-footer"><button type="button" class="btn btn-primary" id="modal-btn-no-2" data-dismiss="modal">Ok</button></div></div></div></div><!-- End Login Required comment modal --><input type="hidden" value="yWkfsbDzarKt422BJ3d15GzV2jZZwhhjaCVWfNExVuibpe1zyQtyqlvdvCv2BBRh" class="csrf-value"><!-- Moderate actions: --><script type="text/javascript">
+        // Auto resize textarea to fit contents:
+        function autoresize(textarea) {
+            textarea = $(textarea)
+            textarea.css('height','0px');     //Reset height, so that it not only grows but also shrinks
+            textarea.css('height',(textarea[0].scrollHeight + 10) + 'px');    //Set new height
+        }
+        $('textarea.comment-edit').keyup(function () {
+            autoresize(this);
+        });
+    </script>
+</html>
